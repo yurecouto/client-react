@@ -15,10 +15,8 @@ function SwitchTheme() {
 
   useEffect(() => {
     if (nightMode) {
-      console.log("dark")
       dispatch(setTheme(dark))
     } else {
-      console.log("light")
       dispatch(setTheme(light))
     }
   }, [nightMode]);

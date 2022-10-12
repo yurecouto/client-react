@@ -10,6 +10,7 @@ interface InputProps {
   bgColor?: string;
   color?: string;
   hoverColor?: string;
+  caretColor?: string;
   setValue?: (param: any) => void;
 }
 
@@ -18,8 +19,9 @@ function Input({
   label,
   setValue,
   bgColor,
-  color = theme.COLORS.ITEM_DEFAULT,
-  hoverColor = theme.COLORS.ITEM_DEFAULT,
+  color,
+  hoverColor,
+  caretColor
 }: InputProps) {
   const [hover, setHover] = useState<boolean>();
 
@@ -38,6 +40,7 @@ function Input({
         style={{
           backgroundColor: bgColor,
           borderColor: hover ? hoverColor : color,
+          caretColor: caretColor
         }}
       />
       <span

@@ -7,8 +7,8 @@ const light = {
     TEXT_DEFAULT: "#0D1117",
 
     // INTERACTIONS
-    ITEM_DEFAULT: "#39A0ED",
-    ITEM_DEFAULT_HOVER: "#226CE0",
+    ITEM_DEFAULT: "#1A8CD8",
+    ITEM_DEFAULT_HOVER: "#1f9cef",
 
   },
 };

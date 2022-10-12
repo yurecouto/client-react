@@ -1,14 +1,14 @@
 const dark = {
   COLORS: {
     // CONTAINERS
-    LOGIN_BOX: "#0D1117",
+    LOGIN_BOX: "#16181C",
 
     // TEXTS
-    TEXT_DEFAULT: "#C9D1D9",
+    TEXT_DEFAULT: "#E7E9EA",
 
     // INTERACTIONS
-    ITEM_DEFAULT: "#39A0ED",
-    ITEM_DEFAULT_HOVER: "#226CE0",
+    ITEM_DEFAULT: "#6C4DE6",
+    ITEM_DEFAULT_HOVER: "#6842ff",
   },
 };
 

@@ -57,6 +57,7 @@ const Login = () => {
           bgColor={theme.COLORS.LOGIN_BOX}
           color={theme.COLORS.ITEM_DEFAULT}
           hoverColor={theme.COLORS.ITEM_DEFAULT}
+          caretColor={theme.COLORS.TEXT_DEFAULT}
         />
 
         <Input
@@ -67,6 +68,7 @@ const Login = () => {
           bgColor={theme.COLORS.LOGIN_BOX}
           color={theme.COLORS.ITEM_DEFAULT}
           hoverColor={theme.COLORS.ITEM_DEFAULT}
+          caretColor={theme.COLORS.TEXT_DEFAULT}
         />
 
         <StandardButton
