@@ -1,6 +1,7 @@
 const dark = {
   COLORS: {
     // CONTAINERS
+    BODY_DEFAULT: "#000000",
     LOGIN_BOX: "#16181C",
 
     // TEXTS

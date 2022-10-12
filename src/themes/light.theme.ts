@@ -1,6 +1,7 @@
 const light = {
   COLORS: {
     // CONTAINERS
+    BODY_DEFAULT: "#FFFFFF",
     LOGIN_BOX: "#D9D9D9",
 
     // TEXTS
