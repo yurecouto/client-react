@@ -12,12 +12,13 @@ import { Input } from "../../../components/inputs/Input";
 import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
+
 import { selectTheme } from "../../../providers/slices/theme.slice";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const theme = useSelector(selectTheme)
+  const theme = useSelector(selectTheme);
   const token = useSelector(selectToken);
 
   useSelector(selectUser)
@@ -28,8 +29,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const login = {
-      email: email,
-      password: password,
+    email: email,
+    password: password,
   };
 
   useEffect(() => {

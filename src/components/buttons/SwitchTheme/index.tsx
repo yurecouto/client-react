@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setTheme, selectTheme } from "../../../providers/slices/theme.slice";
 
-import light from "../../../themes/light";
-import dark from "../../../themes/dark";
+import light from "../../../themes/light.theme";
+import dark from "../../../themes/dark.theme";
 
 import styles from "./styles.module.css";
 
@@ -16,11 +16,13 @@ function SwitchTheme() {
 
   useEffect(() => {
     if (nightMode) {
+      console.log("Night Mode")
       dispatch(setTheme(dark))
     } else {
+      console.log("Day Mode")
       dispatch(setTheme(light))
     }
-  }, [dispatch, nightMode]);
+  }, [nightMode]);
 
   return (
     <label className={styles.switch}>
