@@ -1,12 +1,8 @@
 import React from 'react';
 import {Navigate, Outlet} from 'react-router-dom';
 
-const PrivateRoutes = () =>{
-  const auth = true;
-
-  return auth
-  ? <Outlet/>
-  : <Navigate to="/login"/>
+const PublicRoutes = () =>{
+  return <Outlet/>
 };
 
-export default PrivateRoutes;
+export default PublicRoutes;

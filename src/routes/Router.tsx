@@ -4,10 +4,10 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import AdminRoutes from "./AdminRoutes";
 import PublicRoutes from "./PublicRoutes";
 
-import AdminHome from "../screens/admin/AdminHome";
-import Login from "../screens/public/Login";
+import AdminHome from "../screens/admin/AdminHome/index";
+import { Login } from "../screens/public/Login/index";
 
-export const Router = () => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -24,3 +24,4 @@ export const Router = () => {
   )
 }
 
+export { Router }
