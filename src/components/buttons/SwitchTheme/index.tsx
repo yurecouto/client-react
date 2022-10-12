@@ -10,19 +10,17 @@ import styles from "./styles.module.css";
 
 function SwitchTheme() {
   const dispatch = useDispatch();
-  const theme = useSelector(selectTheme)
+  useSelector(selectTheme)
 
   const [nightMode, setNightMode] = useState<boolean>(false);
 
   useEffect(() => {
     if (nightMode) {
-      console.log("Night Mode")
       dispatch(setTheme(dark))
     } else {
-      console.log("Day Mode")
       dispatch(setTheme(light))
     }
-  }, [nightMode]);
+  }, [dispatch, nightMode]);
 
   return (
     <label className={styles.switch}>
