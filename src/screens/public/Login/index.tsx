@@ -42,7 +42,7 @@ const Login = () => {
 
   useEffect(() => {
     if (token !== "") { navigate("/") }
-  }, [token]);
+  }, [navigate, token]);
 
   return(
     <>

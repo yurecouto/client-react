@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import styles from "./styles.module.css";
-import theme from "../../../themes/index";
 
 interface InputProps {
   value?: string;

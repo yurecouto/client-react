@@ -19,7 +19,7 @@ function SwitchTheme() {
     } else {
       dispatch(setTheme(light))
     }
-  }, [nightMode]);
+  }, [dispatch, nightMode]);
 
   console.log(theme.COLORS.LOGIN_BOX)
 
