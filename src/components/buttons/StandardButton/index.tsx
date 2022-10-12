@@ -14,31 +14,30 @@ function StandardButton({
   hoverColor,
   handleSomething,
   }: InputProps) {
+  const [hover, setHover] = useState<boolean>();
 
-    const [hover, setHover] = useState<boolean>();
+  const handleMouseIn = () => {
+    setHover(true);
+  };
 
-    const handleMouseIn = () => {
-      setHover(true);
-    };
+  const handleMouseOut = () => {
+    setHover(false);
+  };
 
-    const handleMouseOut = () => {
-      setHover(false);
-    };
+  return (
+    <button
+      className={styles.standard_button}
+      onMouseOver={handleMouseIn}
+      onMouseOut={handleMouseOut}
+      onClick={handleSomething}
+      style={{
+        backgroundColor: hover ? hoverColor : color,
+        color: "#fff",
+    }} >
 
-    return (
-        <button
-          className={styles.standard_button}
-          onMouseOver={handleMouseIn}
-          onMouseOut={handleMouseOut}
-          onClick={handleSomething}
-          style={{
-            backgroundColor: hover ? hoverColor : color,
-            color: "#fff",
-        }} >
+      {title}
 
-          {title}
-
-        </button>
+    </button>
   )
 };
 

@@ -8,16 +8,18 @@ import { setUser, selectUser } from "../../../providers/slices/user.slice";
 
 import api from "../../../services/api";
 
-import theme from "../../../themes";
-
 import { Input } from "../../../components/inputs/Input";
 import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
+import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const theme = useSelector(selectTheme)
   const token = useSelector(selectToken);
+
   useSelector(selectUser)
 
   const dispatch = useDispatch();
@@ -44,10 +46,9 @@ const Login = () => {
     };
   };
 
-  console.log(email)
-
   return(
     <>
+      <SwitchTheme/>
       <LoginContainer
         title="Login"
         bgColor={theme.COLORS.LOGIN_BOX}
