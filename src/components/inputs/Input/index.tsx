@@ -1,17 +1,30 @@
+import { useState } from "react";
+
 import styles from "./styles.module.css";
+import theme from "../../../themes/index";
 
 interface InputProps {
   value?: string;
   type?: string;
   label?: string;
+  bgColor?: string;
+  color?: string;
+  hoverColor?: string;
   setValue?: (param: any) => void;
 }
 
 function Input({
-  value,
   type = "input",
   label,
-  setValue }: InputProps) {
+  setValue,
+  bgColor,
+  color = theme.COLORS.ITEM_DEFAULT,
+  hoverColor = theme.COLORS.ITEM_DEFAULT,
+}: InputProps) {
+  const [hover, setHover] = useState<boolean>();
+
+  const handleMouseIn = () => { setHover(true); };
+  const handleMouseOut = () => { setHover(false); };
 
   return (
     <div className={styles.input_container}>
@@ -20,8 +33,22 @@ function Input({
         type={type}
         required
         onChange={setValue}
+        onMouseOver={handleMouseIn}
+        onMouseOut={handleMouseOut}
+        style={{
+          backgroundColor: bgColor,
+          borderColor: hover ? hoverColor : color,
+        }}
       />
-      <span className={styles.label}>{label}</span>
+      <span
+        className={styles.label}
+        style={{
+          backgroundColor: bgColor,
+          color: hover ? hoverColor : color,
+        }}
+      >
+        {label}
+      </span>
     </div>
   )
 };

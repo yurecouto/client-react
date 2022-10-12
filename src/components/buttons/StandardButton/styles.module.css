@@ -1,7 +1,10 @@
 .standard_button {
-  width: 100%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
   height: 40px;
-  border-radius: 10px;
-  font-size: 32px;
+  border-radius: 8px;
+  font-size: 24px;
   cursor: pointer;
+  border: 0px;
 }

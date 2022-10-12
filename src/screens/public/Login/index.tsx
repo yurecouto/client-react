@@ -6,9 +6,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { setJwt, selectToken } from "../../../providers/slices/token.slice";
 import { setUser, selectUser } from "../../../providers/slices/user.slice";
 
-import { Input } from "../../../components/inputs/Input";
-
 import api from "../../../services/api";
+
+import theme from "../../../themes";
+
+import { Input } from "../../../components/inputs/Input";
 import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
 
@@ -48,11 +50,13 @@ const Login = () => {
     <>
       <LoginContainer
         title="Login"
+        bgColor={theme.COLORS.LOGIN_BOX}
       >
         <Input
           label="E-mail"
           value={email}
           setValue={(e: any) => setEmail(e.target.value)}
+          bgColor={theme.COLORS.LOGIN_BOX}
         />
 
         <Input
@@ -60,11 +64,14 @@ const Login = () => {
           type="password"
           value={password}
           setValue={(e: any) => setPassword(e.target.value)}
+          bgColor={theme.COLORS.LOGIN_BOX}
         />
 
         <StandardButton
           title="Login"
           handleSomething={handleLogin}
+          color={theme.COLORS.ITEM_DEFAULT}
+          hoverColor={theme.COLORS.ITEM_DEFAULT_HOVER}
         />
       </LoginContainer>
     </>

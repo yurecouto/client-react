@@ -3,11 +3,15 @@ import styles from "./styles.module.css";
 
 interface InputProps {
   title?: string;
+  color?: string;
+  hoverColor?: string;
   handleSomething?: (param: any) => void;
 }
 
 function StandardButton({
   title,
+  color,
+  hoverColor,
   handleSomething,
   }: InputProps) {
 
@@ -28,7 +32,7 @@ function StandardButton({
           onMouseOut={handleMouseOut}
           onClick={handleSomething}
           style={{
-            backgroundColor: hover ? "#333" : "#999",
+            backgroundColor: hover ? hoverColor : color,
             color: "#fff",
         }} >
 
