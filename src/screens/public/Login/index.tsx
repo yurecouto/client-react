@@ -12,12 +12,12 @@ import { Input } from "../../../components/inputs/Input";
 import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
-
-import theme from "../../../themes";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const theme = useSelector(selectTheme);
   const token = useSelector(selectToken);
   useSelector(selectUser);
   const dispatch = useDispatch();
@@ -55,6 +55,8 @@ const Login = () => {
           value={email}
           setValue={(e: any) => setEmail(e.target.value)}
           bgColor={theme.COLORS.LOGIN_BOX}
+          color={theme.COLORS.ITEM_DEFAULT}
+          hoverColor={theme.COLORS.ITEM_DEFAULT}
         />
 
         <Input
@@ -63,6 +65,8 @@ const Login = () => {
           value={password}
           setValue={(e: any) => setPassword(e.target.value)}
           bgColor={theme.COLORS.LOGIN_BOX}
+          color={theme.COLORS.ITEM_DEFAULT}
+          hoverColor={theme.COLORS.ITEM_DEFAULT}
         />
 
         <StandardButton

@@ -1,5 +1,6 @@
 const light = {
   COLORS: {
+    TESTE: "#fff",
     LOGIN_BOX: "#D9D9D9",
 
     ITEM_DEFAULT: "#39A0ED",
@@ -21,4 +22,4 @@ const light = {
   },
 };
 
-export default light
+export default light;

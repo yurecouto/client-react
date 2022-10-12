@@ -1,6 +1,7 @@
 const dark = {
   COLORS: {
-    LOGIN_BOX: "#666666",
+    TESTE: "#111",
+    LOGIN_BOX: "#888888",
 
     ITEM_DEFAULT: "#39A0ED",
     ITEM_DEFAULT_HOVER: "#226CE0",
@@ -21,4 +22,4 @@ const dark = {
   },
 };
 
-export default dark
+export default dark;
