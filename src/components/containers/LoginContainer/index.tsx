@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { useSelector } from "react-redux";
-import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
+
+import theme from "../../../themes/index"
 
 interface InputProps {
   children?: ReactNode;
@@ -13,8 +13,6 @@ function LoginContainer({
   children,
   title,
   }: InputProps) {
-
-  const theme = useSelector(selectTheme);
 
   return (
     <div

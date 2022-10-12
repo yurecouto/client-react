@@ -13,8 +13,7 @@ import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 
-import { selectTheme, setTheme } from "../../../providers/slices/theme.slice";
-import light from "../../../themes/light.theme";
+import theme from "../../../themes";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -22,9 +21,6 @@ const Login = () => {
   const token = useSelector(selectToken);
   useSelector(selectUser);
   const dispatch = useDispatch();
-
-  dispatch(setTheme(light));
-  const theme = useSelector(selectTheme);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
