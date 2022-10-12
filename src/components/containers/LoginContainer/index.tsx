@@ -23,7 +23,12 @@ function LoginContainer({
         backgroundColor: theme.COLORS.LOGIN_BOX,
       }}
     >
-      <h1 className={styles.login_container_title}>
+      <h1
+        className={styles.login_container_title}
+        style={{
+          color: theme.COLORS.TEXT_DEFAULT
+        }}
+      >
         {title}
       </h1>
 

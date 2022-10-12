@@ -1,8 +1,11 @@
  .switch {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 60px;
   height: 34px;
+  top: 4%;
+  left: 90%;
+  transform: translate(-50%, -50%);
 }
 
 .switch .switch_input {
@@ -18,8 +21,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
   border-radius: 34px;
 }
 
@@ -31,12 +34,10 @@
   left: 4px;
   bottom: 4px;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
   border-radius: 50%;
 }
-
-
 
 .switch_input:checked + .slider:before {
   -webkit-transform: translateX(26px);
