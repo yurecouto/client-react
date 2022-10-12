@@ -13,17 +13,18 @@ import { LoginContainer } from "../../../components/containers/LoginContainer";
 import { StandardButton } from "../../../components/buttons/StandardButton";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 
-import { selectTheme } from "../../../providers/slices/theme.slice";
+import { selectTheme, setTheme } from "../../../providers/slices/theme.slice";
+import light from "../../../themes/light.theme";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const theme = useSelector(selectTheme);
   const token = useSelector(selectToken);
-
-  useSelector(selectUser)
-
+  useSelector(selectUser);
   const dispatch = useDispatch();
+
+  dispatch(setTheme(light));
+  const theme = useSelector(selectTheme);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,10 +33,6 @@ const Login = () => {
     email: email,
     password: password,
   };
-
-  useEffect(() => {
-      if (token !== "") { navigate("/") }
-  }, [token]);
 
   async function handleLogin() {
     try {
@@ -47,12 +44,15 @@ const Login = () => {
     };
   };
 
+  useEffect(() => {
+    if (token !== "") { navigate("/") }
+  }, [token]);
+
   return(
     <>
       <SwitchTheme/>
       <LoginContainer
         title="Login"
-        bgColor={theme.COLORS.LOGIN_BOX}
       >
         <Input
           label="E-mail"

@@ -16,10 +16,8 @@ function SwitchTheme() {
 
   useEffect(() => {
     if (nightMode) {
-      console.log("Night Mode")
       dispatch(setTheme(dark))
     } else {
-      console.log("Day Mode")
       dispatch(setTheme(light))
     }
   }, [nightMode]);
@@ -32,7 +30,14 @@ function SwitchTheme() {
         checked={nightMode}
         onChange={(e) => setNightMode(!nightMode)}
       />
-      <span className={styles.slider}></span>
+      <span
+        className={styles.slider}
+        style={{
+          backgroundColor: nightMode ? "#E53935" : "#0A6ED1",
+        }}
+      />
+
+
     </label>
   )
 };
