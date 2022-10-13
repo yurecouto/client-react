@@ -10,7 +10,6 @@ const light = {
     // INTERACTIONS
     ITEM_DEFAULT: "#1A8CD8",
     ITEM_DEFAULT_HOVER: "#1f9cef",
-
   },
 };
 

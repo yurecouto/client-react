@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setJwt, selectToken } from "../../../providers/slices/token.slice";
+import { setTokens, selectTokens } from "../../../providers/slices/token.slice";
 import { setUser, selectUser } from "../../../providers/slices/user.slice";
 
 import api from "../../../services/api";
@@ -18,8 +18,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const theme = useSelector(selectTheme);
-  const token = useSelector(selectToken);
-  useSelector(selectUser);
+  const tokens = useSelector(selectTokens);
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const [email, setEmail] = useState("");
@@ -32,17 +32,22 @@ const Login = () => {
 
   async function handleLogin() {
     try {
-      const response = await api.post("/login", login);
-      dispatch(setJwt(response.data.token));
+      const response = await api.post("/auth/login", login);
+      dispatch(setTokens({
+        accessToken: response.data.accessToken,
+        refreshToken: response.data.refreshToken
+      }));
       dispatch(setUser(response.data.user));
+
+      if (tokens.accessToken !== "") { navigate("/admin/home") }
     } catch (error) {
       console.log("erro", error )
     };
   };
 
-  useEffect(() => {
-    if (token !== "") { navigate("/") }
-  }, [navigate, token]);
+  // useEffect(() => {
+  //   if (tokens.accessToken !== "") { navigate("/admin/home") }
+  // }, [tokens]);
 
   return(
     <>
@@ -58,7 +63,6 @@ const Login = () => {
           bgColor={theme.COLORS.LOGIN_BOX}
           color={theme.COLORS.ITEM_DEFAULT}
           hoverColor={theme.COLORS.ITEM_DEFAULT}
-          caretColor={theme.COLORS.TEXT_DEFAULT}
         />
 
         <Input
@@ -69,7 +73,6 @@ const Login = () => {
           bgColor={theme.COLORS.LOGIN_BOX}
           color={theme.COLORS.ITEM_DEFAULT}
           hoverColor={theme.COLORS.ITEM_DEFAULT}
-          caretColor={theme.COLORS.TEXT_DEFAULT}
         />
 
         <StandardButton

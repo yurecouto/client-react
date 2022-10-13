@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
@@ -20,8 +22,9 @@ function Input({
   bgColor,
   color,
   hoverColor,
-  caretColor
 }: InputProps) {
+  const theme = useSelector(selectTheme);
+
   const [hover, setHover] = useState<boolean>();
 
   const handleMouseIn = () => { setHover(true); };
@@ -39,7 +42,8 @@ function Input({
         style={{
           backgroundColor: bgColor,
           borderColor: hover ? hoverColor : color,
-          caretColor: caretColor
+          caretColor: theme.COLORS.TEXT_DEFAULT,
+          color: theme.COLORS.TEXT_DEFAULT
         }}
       />
       <span

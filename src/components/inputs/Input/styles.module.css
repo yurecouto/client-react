@@ -35,10 +35,17 @@
   outline: none;
 }
 
+.input:hover {
+  padding-left: 9px;
+  border-width: 2px;
+  outline: none;
+}
+
 .input:focus + .label {
   top: 10px;
   left: 10px;
   font-size: 12px;
+  font-weight: bolder;
   padding-left: 5px;
   padding-right: 5px;
 }

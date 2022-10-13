@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import { selectToken } from '../providers/slices/token.slice';
+import { selectTokens } from '../providers/slices/token.slice';
 // import { selectProfile } from '../providers/slices/profileSlice';
 
 /* Aqui basicamente verificamos se o valor do jwt existe,
 caso seja nulo ou undefined, retornaremos false, caso ele exista será true,
 com true poderemos acessar rotas privadas */
 export const useAuthJwt = () => {
-    const valor = useSelector(selectToken);
+    const token = useSelector(selectTokens);
 
-    if (valor) {
+    if (token) {
         return true
     } else {
         return false

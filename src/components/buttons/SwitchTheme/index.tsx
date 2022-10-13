@@ -21,8 +21,6 @@ function SwitchTheme() {
     }
   }, [dispatch, nightMode]);
 
-  console.log(theme.COLORS.LOGIN_BOX)
-
   return (
     <label className={styles.switch}>
       <input
@@ -34,7 +32,7 @@ function SwitchTheme() {
       <span
         className={styles.slider}
         style={{
-          backgroundColor: nightMode ? "#E53935" : "#0A6ED1",
+          backgroundColor: theme.COLORS.ITEM_DEFAULT_HOVER,
         }}
       />
 
