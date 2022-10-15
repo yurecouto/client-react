@@ -9,7 +9,7 @@ interface InputProps {
   type?: string;
   label?: string;
   bgColor?: string;
-  color?: string;
+  fontColor?: string;
   hoverColor?: string;
   caretColor?: string;
   setValue?: (param: any) => void;
@@ -19,11 +19,20 @@ function Input({
   type = "input",
   label,
   setValue,
-  bgColor,
-  color,
-  hoverColor,
+  bgColor = "",
+  fontColor = "",
+  hoverColor = "",
 }: InputProps) {
   const theme = useSelector(selectTheme);
+
+  if (
+    bgColor === "" &&
+    hoverColor === "" &&
+    fontColor === "") {
+      hoverColor = theme.COLORS.ITEM_DEFAULT
+      fontColor = theme.COLORS.ITEM_DEFAULT
+      bgColor = theme.COLORS.CONTAINER_DEFAULT
+  }
 
   const [hover, setHover] = useState<boolean>();
 
@@ -41,7 +50,7 @@ function Input({
         onMouseOut={handleMouseOut}
         style={{
           backgroundColor: bgColor,
-          borderColor: hover ? hoverColor : color,
+          borderColor: hover ? hoverColor : fontColor,
           caretColor: theme.COLORS.TEXT_DEFAULT,
           color: theme.COLORS.TEXT_DEFAULT
         }}
@@ -50,7 +59,7 @@ function Input({
         className={styles.label}
         style={{
           backgroundColor: bgColor,
-          color: hover ? hoverColor : color,
+          color: hover ? hoverColor : fontColor,
         }}
       >
         {label}

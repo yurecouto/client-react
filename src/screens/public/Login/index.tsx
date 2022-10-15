@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,17 +10,15 @@ import api from "../../../services/api";
 
 import { Input } from "../../../components/inputs/Input";
 import { LoginContainer } from "../../../components/containers/LoginContainer";
-import { StandardButton } from "../../../components/buttons/StandardButton";
+import { ButtonDefault } from "../../../components/buttons/ButtonDefault";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
-import { selectTheme } from "../../../providers/slices/theme.slice";
 
 const Login = () => {
   const navigate = useNavigate();
-
-  const theme = useSelector(selectTheme);
-  const tokens = useSelector(selectTokens);
-  const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
+  useSelector(selectUser);
+  const tokens = useSelector(selectTokens);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,24 +43,15 @@ const Login = () => {
     };
   };
 
-  // useEffect(() => {
-  //   if (tokens.accessToken !== "") { navigate("/admin/home") }
-  // }, [tokens]);
-
   return(
     <>
       <SwitchTheme/>
 
-      <LoginContainer
-        title="Login"
-      >
+      <LoginContainer>
         <Input
           label="E-mail"
           value={email}
           setValue={(e: any) => setEmail(e.target.value)}
-          bgColor={theme.COLORS.LOGIN_BOX}
-          color={theme.COLORS.ITEM_DEFAULT}
-          hoverColor={theme.COLORS.ITEM_DEFAULT}
         />
 
         <Input
@@ -70,16 +59,11 @@ const Login = () => {
           type="password"
           value={password}
           setValue={(e: any) => setPassword(e.target.value)}
-          bgColor={theme.COLORS.LOGIN_BOX}
-          color={theme.COLORS.ITEM_DEFAULT}
-          hoverColor={theme.COLORS.ITEM_DEFAULT}
         />
 
-        <StandardButton
+        <ButtonDefault
           title="Login"
           handleSomething={handleLogin}
-          color={theme.COLORS.ITEM_DEFAULT}
-          hoverColor={theme.COLORS.ITEM_DEFAULT_HOVER}
         />
       </LoginContainer>
     </>

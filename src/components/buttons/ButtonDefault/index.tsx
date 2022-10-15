@@ -1,19 +1,30 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 import styles from "./styles.module.css";
 
 interface InputProps {
   title?: string;
-  color?: string;
+  bgColor?: string;
   hoverColor?: string;
   handleSomething?: (param: any) => void;
 }
 
-function StandardButton({
+function ButtonDefault({
   title,
-  color,
-  hoverColor,
+  bgColor = "",
+  hoverColor = "",
   handleSomething,
   }: InputProps) {
+  const theme = useSelector(selectTheme);
+
+  if (
+    bgColor === "" &&
+    hoverColor === "") {
+      bgColor = theme.COLORS.ITEM_DEFAULT
+      hoverColor = theme.COLORS.ITEM_DEFAULT_HOVER
+  }
+
   const [hover, setHover] = useState<boolean>();
 
   const handleMouseIn = () => {
@@ -31,7 +42,7 @@ function StandardButton({
       onMouseOut={handleMouseOut}
       onClick={handleSomething}
       style={{
-        backgroundColor: hover ? hoverColor : color,
+        backgroundColor: hover ? hoverColor : bgColor,
         color: "#fff",
     }} >
 
@@ -41,4 +52,4 @@ function StandardButton({
   )
 };
 
-export { StandardButton };
+export { ButtonDefault };

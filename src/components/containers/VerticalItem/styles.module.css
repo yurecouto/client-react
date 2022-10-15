@@ -1,0 +1,13 @@
+.vertical_item {
+  height: 64px;
+  width: 100%;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  margin-top: -18px;
+}
+
+.vertical_item_link {
+  text-decoration: none;
+  height: 0px;
+}

@@ -1,0 +1,9 @@
+.item_title_default {
+  text-align: center;
+  width: 100%;
+  font-weight: lighter;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

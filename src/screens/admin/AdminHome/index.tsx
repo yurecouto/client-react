@@ -1,5 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
+import { NavigationBar } from "../../../components/bars/NavigationBar";
 
 
 const AdminHome = () => {
@@ -8,8 +10,8 @@ const AdminHome = () => {
 
   return (
     <>
-      {/* <Header objeto={user} agendamento={true}/>
-      <NavBar objeto={user} /> */}
+      <SwitchTheme/>
+      <NavigationBar/>
     </>
   );
 };

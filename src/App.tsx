@@ -8,6 +8,8 @@ function App() {
 
   useEffect(() => {
     document.body.style.backgroundColor = theme.COLORS.BODY_DEFAULT;
+    document.body.style.padding = "0";
+    document.body.style.margin = "0";
   }, [theme]);
 
   return (

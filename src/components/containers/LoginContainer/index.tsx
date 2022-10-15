@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
+import { TitleDefault } from "../../titles/TitleDefault";
 
 import styles from "./styles.module.css";
 
@@ -11,7 +12,6 @@ interface InputProps {
 
 function LoginContainer({
   children,
-  title,
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
@@ -20,17 +20,10 @@ function LoginContainer({
     <div
       className={styles.login_container}
       style={{
-        backgroundColor: theme.COLORS.LOGIN_BOX,
+        backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <h1
-        className={styles.login_container_title}
-        style={{
-          color: theme.COLORS.TEXT_DEFAULT
-        }}
-      >
-        {title}
-      </h1>
+      <TitleDefault title="Login"/>
 
       {children}
     </div>

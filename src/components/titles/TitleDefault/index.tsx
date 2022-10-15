@@ -1,29 +1,26 @@
-import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
 interface InputProps {
-  children?: ReactNode;
+  title?: string;
 }
 
-function BodyDefault({
-  children,
+function TitleDefault({
+  title,
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
 
   return (
-    <div
-      className={styles.body_default}
-      style={{
-        backgroundColor: theme.COLORS.BODY_DEFAULT,
-      }}
+    <h1
+      className={styles.title_default}
+      style={{color: theme.COLORS.TEXT_DEFAULT}}
     >
-      {children}
-    </div>
+      {title}
+    </h1>
   )
 };
 
-export { BodyDefault };
+export { TitleDefault };

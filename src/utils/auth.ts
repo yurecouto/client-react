@@ -6,9 +6,9 @@ import { selectTokens } from '../providers/slices/token.slice';
 caso seja nulo ou undefined, retornaremos false, caso ele exista será true,
 com true poderemos acessar rotas privadas */
 export const useAuthJwt = () => {
-    const token = useSelector(selectTokens);
+    const tokens = useSelector(selectTokens);
 
-    if (token) {
+    if (tokens.accessToken !== "") {
         return true
     } else {
         return false
