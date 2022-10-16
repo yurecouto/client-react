@@ -3,10 +3,10 @@ import { NavigationBar } from "../../../components/bars/NavigationBar";
 
 // import { styles } from "./styles.module.css";
 
-const AdminHome = () => {
+const AdminProducts = () => {
   // const user = useSelector(selectUser);
   // const token = useSelector(selectToken);
-  // const theme = useSelector(selectTheme);
+  //const theme = useSelector(selectTheme);
 
   return (
     <>
@@ -16,4 +16,4 @@ const AdminHome = () => {
   );
 };
 
-export default AdminHome;
+export default AdminProducts;

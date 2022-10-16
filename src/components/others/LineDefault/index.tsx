@@ -5,11 +5,12 @@ import styles from "./styles.module.css";
 
 function LineDefault() {
   const theme = useSelector(selectTheme);
+  console.log(theme.TEXT_DEFAULT)
 
   return (
     <div
       className={styles.line_default}
-      style={{ borderColor: theme.TEXT_DEFAULT}}
+      style={{ borderTopColor: theme.COLORS.CONTAINER_DEFAULT_HOVER}}
     />
   )
 };

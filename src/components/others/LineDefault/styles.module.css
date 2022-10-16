@@ -1,4 +1,6 @@
 .line_default {
-  width: 100%;
+  width: 98%;
   border-top: 1px solid;
+  margin-left: 1%;
+  margin-right: 1%;
 }

@@ -1,10 +1,17 @@
 .navigation_bar {
-  width: 16%;
+  width: 12%;
   height: 100vh;
   position: fixed;
 }
 
-.navigation_bar_title {
-  text-align: center;
-  width: 100%;
+.navigation_bar_items {
+  position: relative;
+  top: 36%;
+  transform: translate(0,-50%);
+}
+
+.navigation_bar_foot {
+  position: relative;
+  top: 40%;
+  transform: translate(0,-50%);
 }

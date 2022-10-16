@@ -2,15 +2,18 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import { selectTheme } from "../../../providers/slices/theme.slice";
-import { ItemTitleDefault } from "../../titles/ItemTitleDefault";
+import { ItemTitleDefault } from "../../texts/ItemTitleDefault";
 
 import styles from "./styles.module.css";
+import { IconDefault } from "../../others/IconDefault";
 
 interface InputProps {
   title?: string;
   route?: string;
   bgColor?: string;
+  icon?: string;
   hoverColor?: string;
+  page?: boolean;
 }
 
 function VerticalItem({
@@ -18,6 +21,8 @@ function VerticalItem({
   route = "/",
   bgColor = "",
   hoverColor = "",
+  icon = "",
+  page
   }: InputProps) {
   const theme = useSelector(selectTheme);
 
@@ -45,7 +50,8 @@ function VerticalItem({
       onMouseEnter={handleMouseIn}
       onMouseLeave={handleMouseOut}
       style={{
-        backgroundColor: hover ? hoverColor : bgColor,
+        backgroundColor: page ? hoverColor :
+        hover ? hoverColor : bgColor,
       }}
     >
       <Link
@@ -54,8 +60,14 @@ function VerticalItem({
       >
         <div
           className={styles.vertical_item}
-
         >
+          <IconDefault
+            icon={icon}
+            bgColor={ page ? hoverColor : hover ? hoverColor : bgColor }
+            hoverColor={ hover ?
+              theme.COLORS.ITEM_DEFAULT_HOVER :
+              theme.COLORS.ITEM_DEFAULT }
+          />
           <ItemTitleDefault title={title}/>
         </div>
       </Link>

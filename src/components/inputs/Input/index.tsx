@@ -29,7 +29,7 @@ function Input({
     bgColor === "" &&
     hoverColor === "" &&
     fontColor === "") {
-      hoverColor = theme.COLORS.ITEM_DEFAULT
+      hoverColor = theme.COLORS.ITEM_DEFAULT_HOVER
       fontColor = theme.COLORS.ITEM_DEFAULT
       bgColor = theme.COLORS.CONTAINER_DEFAULT
   }

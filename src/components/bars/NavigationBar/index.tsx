@@ -1,13 +1,19 @@
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
-import { SubtitleDefault } from "../../titles/SubtitleDefault";
-import { TitleDefault } from "../../titles/TitleDefault";
-import { VerticalItem } from "../../containers/VerticalItem"
+
+import { SubtitleDefault } from "../../texts/SubtitleDefault";
+import { TitleDefault } from "../../texts/TitleDefault";
+import { VerticalItem } from "../../containers/VerticalItem";
+import { LineDefault } from "../../others/LineDefault";
+import { TextDefault } from "../../texts/TextDefault";
 
 import styles from "./styles.module.css";
-import { LineDefault } from "../../others/LineDefault";
 
-function NavigationBar() {
+interface InputProps {
+  page?: string
+}
+
+function NavigationBar({ page }: InputProps) {
   const theme = useSelector(selectTheme);
 
   return (
@@ -19,30 +25,58 @@ function NavigationBar() {
       <TitleDefault title={"Client"}/>
       <SubtitleDefault subtitle={"Administration"}/>
 
-      <VerticalItem
-        title={"Home"}
-        route={"/admin/home"}
-      />
-      <LineDefault/>
-      <VerticalItem
-        title={"Users"}
-      />
-      <LineDefault/>
-      <VerticalItem
-        title={"Products"}
-      />
-      <LineDefault/>
-      <VerticalItem
-        title={"Sells"}
-      />
-      <LineDefault/>
-      <VerticalItem
-        title={"Info"}
-      />
-      <LineDefault/>
-      <VerticalItem
-        title={"Settings"}
-      />
+      <div
+        className={styles.navigation_bar_items}
+      >
+        <LineDefault/>
+        <VerticalItem
+          title={"Home"}
+          icon={"bxs:home"}
+          route={"/admin/home"}
+          page={page === "/admin/home"}
+        />
+        <LineDefault/>
+        <VerticalItem
+          title={"Users"}
+          icon={"bxs:user"}
+          route={"/admin/users"}
+          page={page === "/admin/users"}
+        />
+        <LineDefault/>
+        <VerticalItem
+          title={"Products"}
+          icon={"fluent:box-16-filled"}
+          route={"/admin/products"}
+          page={page === "/admin/products"}
+        />
+        <LineDefault/>
+        <VerticalItem
+          title={"Sells"}
+          icon={"ic:baseline-sell"}
+          route={"/admin/sells"}
+          page={page === "/admin/sells"}
+        />
+        <LineDefault/>
+        <VerticalItem
+          title={"Info"}
+          icon={"entypo:info"}
+          route={"/admin/info"}
+          page={page === "/admin/info"}
+        />
+        <LineDefault/>
+        <VerticalItem
+          title={"Settings"}
+          icon={"fa6-solid:gear"}
+          route={"/admin/settings"}
+          page={page === "/admin/settings"}
+        />
+        <LineDefault/>
+      </div>
+
+      <div className={styles.navigation_bar_foot}>
+        <TextDefault text="All Rights Reserved © 2022"/>
+        <TextDefault text=" Made by: @yurecouto"/>
+      </div>
     </nav>
   )
 };

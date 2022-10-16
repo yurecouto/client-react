@@ -4,7 +4,7 @@
   align-items: center;
   margin: 0px;
   padding: 0px;
-  margin-top: -18px;
+  justify-content: space-between;
 }
 
 .vertical_item_link {

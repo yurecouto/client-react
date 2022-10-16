@@ -3,8 +3,10 @@
   margin-left: 30%;
   margin-right: 30%;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 24px;
   cursor: pointer;
   border: 0px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }

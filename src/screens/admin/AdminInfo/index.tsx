@@ -1,9 +1,8 @@
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
-
 // import { styles } from "./styles.module.css";
 
-const AdminHome = () => {
+const AdminInfo = () => {
   // const user = useSelector(selectUser);
   // const token = useSelector(selectToken);
   // const theme = useSelector(selectTheme);
@@ -16,4 +15,5 @@ const AdminHome = () => {
   );
 };
 
-export default AdminHome;
+export default AdminInfo;
+

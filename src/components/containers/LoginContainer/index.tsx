@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
-import { TitleDefault } from "../../titles/TitleDefault";
+import { TitleDefault } from "../../texts/TitleDefault";
 
 import styles from "./styles.module.css";
 
