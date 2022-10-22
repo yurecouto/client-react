@@ -10,7 +10,7 @@ interface InputProps {
   title?: string;
 }
 
-function HalfVerticalContainer({
+function HalfVertical({
   children,
   }: InputProps) {
 
@@ -30,4 +30,4 @@ function HalfVerticalContainer({
   )
 };
 
-export { HalfVerticalContainer };
+export { HalfVertical };

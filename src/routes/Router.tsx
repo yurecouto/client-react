@@ -17,13 +17,13 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin" element={<AdminRoutes/>}>
-          <Route path="/admin/home" element={<AdminHome />} />
-          <Route path="/admin/users" element={<AdminUsers />} />
-          <Route path="/admin/products" element={<AdminProducts />} />
-          <Route path="/admin/sells" element={<AdminSells />} />
-          <Route path="/admin/info" element={<AdminInfo />} />
-          <Route path="/admin/settings" element={<AdminSettings />} />
+        <Route path="/" element={<AdminRoutes/>}>
+          <Route path="/home" element={<AdminHome />} />
+          <Route path="/users" element={<AdminUsers />} />
+          <Route path="/products" element={<AdminProducts />} />
+          <Route path="/sells" element={<AdminSells />} />
+          <Route path="/info" element={<AdminInfo />} />
+          <Route path="/settings" element={<AdminSettings />} />
         </Route>
 
         <Route path="/login" element={<PublicRoutes/>}>

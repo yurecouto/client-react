@@ -32,43 +32,43 @@ function NavigationBar({ page }: InputProps) {
         <VerticalItem
           title={"Home"}
           icon={"bxs:home"}
-          route={"/admin/home"}
-          page={page === "/admin/home"}
+          route={"/home"}
+          page={page === "/home"}
         />
         <LineDefault/>
         <VerticalItem
           title={"Users"}
           icon={"bxs:user"}
-          route={"/admin/users"}
-          page={page === "/admin/users"}
+          route={"/users"}
+          page={page === "/users"}
         />
         <LineDefault/>
         <VerticalItem
           title={"Products"}
           icon={"fluent:box-16-filled"}
-          route={"/admin/products"}
-          page={page === "/admin/products"}
+          route={"/products"}
+          page={page === "/products"}
         />
         <LineDefault/>
         <VerticalItem
           title={"Sells"}
           icon={"ic:baseline-sell"}
-          route={"/admin/sells"}
-          page={page === "/admin/sells"}
+          route={"/sells"}
+          page={page === "/sells"}
         />
         <LineDefault/>
         <VerticalItem
           title={"Info"}
           icon={"entypo:info"}
-          route={"/admin/info"}
-          page={page === "/admin/info"}
+          route={"/info"}
+          page={page === "/info"}
         />
         <LineDefault/>
         <VerticalItem
           title={"Settings"}
           icon={"fa6-solid:gear"}
-          route={"/admin/settings"}
-          page={page === "/admin/settings"}
+          route={"/settings"}
+          page={page === "/settings"}
         />
         <LineDefault/>
       </div>

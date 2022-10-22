@@ -1,7 +1,7 @@
 import { NavigationBar } from "../../../components/bars/NavigationBar";
 import { HalfColumn } from "../../../components/containers/HalfColumn";
-import { HalfHorizontalContainer } from "../../../components/containers/HalfHorizontalContainer";
-import { QuartVerticalContainer } from "../../../components/containers/QuartVerticalContainer";
+import { HalfHorizontal } from "../../../components/containers/HalfHorizontal";
+import { QuartVertical } from "../../../components/containers/QuartVertical";
 import { Row } from "../../../components/containers/Row";
 import { WrapperDefault } from "../../../components/containers/WrapperDefault";
 
@@ -19,11 +19,11 @@ const AdminUsers = () => {
       <WrapperDefault>
         <Row>
           <HalfColumn>
-            <QuartVerticalContainer/>
+            <QuartVertical/>
 
-            <QuartVerticalContainer/>
+            <QuartVertical/>
           </HalfColumn>
-          <HalfHorizontalContainer/>
+          <HalfHorizontal/>
         </Row>
       </WrapperDefault>
     </>

@@ -10,7 +10,7 @@ interface InputProps {
   title?: string;
 }
 
-function QuartHorizontalContainer({
+function QuartHorizontal({
   children,
   }: InputProps) {
 
@@ -30,4 +30,4 @@ function QuartHorizontalContainer({
   )
 };
 
-export { QuartHorizontalContainer };
+export { QuartHorizontal };

@@ -1,7 +1,7 @@
 import { NavigationBar } from "../../../components/bars/NavigationBar";
 import { WrapperDefault } from "../../../components/containers/WrapperDefault";
 import { Column } from "../../../components/containers/Column";
-import { HalfVerticalContainer } from "../../../components/containers/HalfVerticalContainer";
+import { HalfVertical } from "../../../components/containers/HalfVertical";
 
 // import { styles } from "./styles.module.css";
 
@@ -16,8 +16,8 @@ const AdminSells = () => {
 
       <WrapperDefault>
         <Column>
-          <HalfVerticalContainer/>
-          <HalfVerticalContainer/>
+          <HalfVertical/>
+          <HalfVertical/>
         </Column>
       </WrapperDefault>
     </>

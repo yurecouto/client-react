@@ -10,10 +10,11 @@ import { selectTheme, setTheme } from "../../../providers/slices/theme.slice";
 function SwitchTheme() {
   const dispatch = useDispatch();
   const theme = useSelector(selectTheme);
-  const [nightMode, setNightMode] = useState<boolean>(theme === dark);
+  const localTheme = localStorage.getItem("theme")
+  const [nightMode, setNightMode] = useState<boolean>(localTheme === "dark");
 
   function handleChangeTheme() {
-    if (theme === light) {
+    if (localTheme === "light") {
       setNightMode(true)
     } else {
       setNightMode(false)
@@ -23,8 +24,10 @@ function SwitchTheme() {
   useEffect(() => {
     if (nightMode) {
       dispatch(setTheme(dark))
+      localStorage.setItem("theme", "dark")
     } else {
       dispatch(setTheme(light))
+      localStorage.setItem("theme", "light")
     }
   }, [dispatch, nightMode])
 

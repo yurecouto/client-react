@@ -10,7 +10,7 @@ interface InputProps {
   title?: string;
 }
 
-function QuartVerticalContainer({
+function HalfHorizontal({
   children,
   }: InputProps) {
 
@@ -18,16 +18,16 @@ function QuartVerticalContainer({
 
   return (
     <div
-      className={styles.quart_vertical_container}
+      className={styles.half_horizontal_container}
       style={{
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="half vertical"/>
+      <TitleDefault title="half horizontal"/>
 
       {children}
     </div>
   )
 };
 
-export { QuartVerticalContainer };
+export { HalfHorizontal };

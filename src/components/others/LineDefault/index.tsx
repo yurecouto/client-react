@@ -5,7 +5,6 @@ import styles from "./styles.module.css";
 
 function LineDefault() {
   const theme = useSelector(selectTheme);
-  console.log(theme.TEXT_DEFAULT)
 
   return (
     <div

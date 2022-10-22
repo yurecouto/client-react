@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setTokens, selectTokens } from "../../../providers/slices/token.slice";
 import { setUser, selectUser } from "../../../providers/slices/user.slice";
 
 import api from "../../../services/api";
@@ -18,8 +17,6 @@ const Login = () => {
   const dispatch = useDispatch();
 
   useSelector(selectUser);
-  const tokens = useSelector(selectTokens);
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -31,13 +28,19 @@ const Login = () => {
   async function handleLogin() {
     try {
       const response = await api.post("/auth/login", login);
-      dispatch(setTokens({
-        accessToken: response.data.accessToken,
-        refreshToken: response.data.refreshToken
-      }));
+      // dispatch(setTokens({
+      //   accessToken: response.data.accessToken,
+      //   refreshToken: response.data.refreshToken
+      // }));
+      localStorage.setItem("accessToken", response.data.accessToken)
+      localStorage.setItem("refreshToken", response.data.refreshToken)
+
       dispatch(setUser(response.data.user));
 
-      if (tokens.accessToken !== "") { navigate("/admin/home") }
+      const accessToken = localStorage.getItem("accessToken")
+      console.log("accessToken =>", accessToken)
+
+      if (accessToken !== "") { navigate("/home") }
     } catch (error) {
       console.log("erro", error )
     };
