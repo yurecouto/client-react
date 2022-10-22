@@ -50,6 +50,7 @@ const Login = () => {
       <LoginContainer>
         <Input
           label="E-mail"
+          type="email"
           value={email}
           setValue={(e: any) => setEmail(e.target.value)}
         />

@@ -1,0 +1,6 @@
+.wrapper_half_column_default {
+  width: 49.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

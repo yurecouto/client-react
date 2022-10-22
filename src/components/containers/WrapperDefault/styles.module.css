@@ -1,0 +1,10 @@
+.wrapper_default {
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  width: 86%;
+  height: 96vh;
+  float: right;
+  display: flex;
+}

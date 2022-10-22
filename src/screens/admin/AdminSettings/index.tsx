@@ -1,5 +1,7 @@
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { WrapperDefault } from "../../../components/containers/WrapperDefault";
+import { FullContainer } from "../../../components/containers/FullContainer";
 
 // import { styles } from "./styles.module.css";
 
@@ -10,8 +12,13 @@ const AdminSettings = () => {
 
   return (
     <>
-      <SwitchTheme/>
       <NavigationBar page={window.location.pathname}/>
+
+      <WrapperDefault>
+        <FullContainer>
+          <SwitchTheme/>
+        </FullContainer>
+      </WrapperDefault>
     </>
   );
 };

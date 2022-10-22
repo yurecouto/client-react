@@ -11,7 +11,7 @@ import AdminUsers from "../screens/admin/AdminUsers";
 import AdminProducts from "../screens/admin/AdminProducts";
 import AdminSells from "../screens/admin/AdminSells";
 import AdminSettings from "../screens/admin/AdminSettings";
-import AdminInfo from "../screens/admin/AdminUsers";
+import AdminInfo from "../screens/admin/AdminInfo";
 
 const Router = () => {
   return (

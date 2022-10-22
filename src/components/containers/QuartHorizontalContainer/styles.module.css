@@ -1,0 +1,7 @@
+.quart_horizontal_container {
+  width: 49.5%;
+  height: 47vh;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+}

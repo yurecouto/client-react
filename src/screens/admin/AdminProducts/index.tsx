@@ -1,5 +1,5 @@
-import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { WrapperDefault } from "../../../components/containers/WrapperDefault";
 
 // import { styles } from "./styles.module.css";
 
@@ -10,8 +10,11 @@ const AdminProducts = () => {
 
   return (
     <>
-      <SwitchTheme/>
       <NavigationBar page={window.location.pathname}/>
+
+      <WrapperDefault>
+
+      </WrapperDefault>
     </>
   );
 };

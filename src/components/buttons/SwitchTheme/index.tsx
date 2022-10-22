@@ -42,8 +42,6 @@ function SwitchTheme() {
           backgroundColor: theme.COLORS.ITEM_DEFAULT,
         }}
       />
-
-
     </label>
   )
 };

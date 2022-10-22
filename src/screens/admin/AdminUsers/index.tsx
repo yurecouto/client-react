@@ -1,5 +1,9 @@
-import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { HalfColumn } from "../../../components/containers/HalfColumn";
+import { HalfHorizontalContainer } from "../../../components/containers/HalfHorizontalContainer";
+import { QuartVerticalContainer } from "../../../components/containers/QuartVerticalContainer";
+import { Row } from "../../../components/containers/Row";
+import { WrapperDefault } from "../../../components/containers/WrapperDefault";
 
 // import { styles } from "./styles.module.css";
 
@@ -10,8 +14,18 @@ const AdminUsers = () => {
 
   return (
     <>
-      <SwitchTheme/>
       <NavigationBar page={window.location.pathname}/>
+
+      <WrapperDefault>
+        <Row>
+          <HalfColumn>
+            <QuartVerticalContainer/>
+
+            <QuartVerticalContainer/>
+          </HalfColumn>
+          <HalfHorizontalContainer/>
+        </Row>
+      </WrapperDefault>
     </>
   );
 };
