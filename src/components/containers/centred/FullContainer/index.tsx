@@ -1,16 +1,15 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
-import { selectTheme } from "../../../providers/slices/theme.slice";
-import { TitleDefault } from "../../texts/TitleDefault";
+import { selectTheme } from "../../../../providers/slices/theme.slice";
+import { TitleDefault } from "../../../texts/TitleDefault";
 
 import styles from "./styles.module.css";
 
 interface InputProps {
   children?: ReactNode;
-  title?: string;
 }
 
-function LoginContainer({
+function FullContainer({
   children,
   }: InputProps) {
 
@@ -18,16 +17,16 @@ function LoginContainer({
 
   return (
     <div
-      className={styles.login_container}
+      className={styles.full_container}
       style={{
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="Login"/>
+      <TitleDefault title="full"/>
 
       {children}
     </div>
   )
 };
 
-export { LoginContainer };
+export { FullContainer };

@@ -1,7 +1,9 @@
+import React from "react";
+
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
-import { WrapperDefault } from "../../../components/containers/WrapperDefault";
-import { FullContainer } from "../../../components/containers/FullContainer";
+import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
+import { FullContainer } from "../../../components/containers/centred/FullContainer";
 
 // import { styles } from "./styles.module.css";
 

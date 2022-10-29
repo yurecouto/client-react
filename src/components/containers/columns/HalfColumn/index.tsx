@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 import styles from "./styles.module.css";
 
@@ -6,17 +6,17 @@ interface InputProps {
   children?: ReactNode;
 }
 
-function Row({
+function HalfColumn({
   children,
   }: InputProps) {
 
   return (
     <div
-      className={styles.wrapper_row_default}
+      className={styles.wrapper_half_column_default}
     >
       {children}
     </div>
   )
 };
 
-export { Row };
+export { HalfColumn };

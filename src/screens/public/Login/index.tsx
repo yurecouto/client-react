@@ -8,7 +8,7 @@ import { setUser, selectUser } from "../../../providers/slices/user.slice";
 import api from "../../../services/api";
 
 import { Input } from "../../../components/inputs/Input";
-import { LoginContainer } from "../../../components/containers/LoginContainer";
+import { LoginContainer } from "../../../components/containers/centred/LoginContainer";
 import { ButtonDefault } from "../../../components/buttons/ButtonDefault";
 import { SwitchTheme } from "../../../components/buttons/SwitchTheme";
 
@@ -32,15 +32,17 @@ const Login = () => {
       //   accessToken: response.data.accessToken,
       //   refreshToken: response.data.refreshToken
       // }));
-      localStorage.setItem("accessToken", response.data.accessToken)
-      localStorage.setItem("refreshToken", response.data.refreshToken)
+
+      localStorage.setItem("tokens", JSON.stringify({
+          accessToken: response.data.accessToken,
+          refreshToken: response.data.refreshToken
+      }))
 
       dispatch(setUser(response.data.user));
 
-      const accessToken = localStorage.getItem("accessToken")
-      console.log("accessToken =>", accessToken)
+      const tokens = JSON.parse( localStorage.getItem("tokens") || "{}" )
 
-      if (accessToken !== "") { navigate("/home") }
+      if (tokens.accessToken !== "") { navigate("/home") }
     } catch (error) {
       console.log("erro", error )
     };

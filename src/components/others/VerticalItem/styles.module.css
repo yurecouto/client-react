@@ -1,0 +1,36 @@
+.vertical_item {
+  height: 72px;
+  width: 100%;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vertical_item_link {
+  text-decoration: none;
+  height: 0px;
+}
+
+.vertical_item_icon {
+  height: 24px;
+  width: 24px;
+  float: left;
+  position: relative;
+  top: 15%;
+}
+
+.vertical_item_title {
+  width: 120px;
+  height: 36px;
+  text-align: center;
+}
+
+.vertical_item_title_text {
+  font-size: 16px;
+  font-weight: lighter;
+  position: relative;
+  margin-top: 0;
+}

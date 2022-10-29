@@ -1,7 +1,7 @@
-import { NavigationBar } from "../../../components/bars/NavigationBar";
-import { WrapperDefault } from "../../../components/containers/WrapperDefault";
+import React from "react";
 
-// import { styles } from "./styles.module.css";
+import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
 
 const AdminProducts = () => {
   // const user = useSelector(selectUser);

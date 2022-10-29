@@ -1,9 +1,9 @@
-import { NavigationBar } from "../../../components/bars/NavigationBar";
-import { WrapperDefault } from "../../../components/containers/WrapperDefault";
-import { Column } from "../../../components/containers/Column";
-import { HalfVertical } from "../../../components/containers/HalfVertical";
+import React from "react";
 
-// import { styles } from "./styles.module.css";
+import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
+import { Column } from "../../../components/containers/columns/Column";
+import { HalfVertical } from "../../../components/containers/halfs/HalfVertical";
 
 const AdminSells = () => {
   // const user = useSelector(selectUser);

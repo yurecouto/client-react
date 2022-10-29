@@ -1,11 +1,11 @@
-import { NavigationBar } from "../../../components/bars/NavigationBar";
-import { WrapperDefault } from "../../../components/containers/WrapperDefault";
-import { Column } from "../../../components/containers/Column";
-import { Row } from "../../../components/containers/Row";
-import { QuartHorizontal } from "../../../components/containers/QuartHorizontal";
-import { HalfVertical } from "../../../components/containers/HalfVertical";
+import React from "react";
 
-// import { styles } from "./styles.module.css";
+import { NavigationBar } from "../../../components/bars/NavigationBar";
+import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
+import { Column } from "../../../components/containers/columns/Column";
+import { Row } from "../../../components/containers/rows/Row";
+import { QuartHorizontal } from "../../../components/containers/quarts/QuartHorizontal";
+import { HalfVertical } from "../../../components/containers/halfs/HalfVertical";
 
 const AdminHome = () => {
   // const user = useSelector(selectUser);

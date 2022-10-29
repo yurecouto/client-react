@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
-import { selectTheme } from "../../../providers/slices/theme.slice";
-import { TitleDefault } from "../../texts/TitleDefault";
+import { selectTheme } from "../../../../providers/slices/theme.slice";
+import { TitleDefault } from "../../../texts/TitleDefault";
 
 import styles from "./styles.module.css";
 
@@ -10,7 +10,7 @@ interface InputProps {
   title?: string;
 }
 
-function HalfVertical({
+function HalfHorizontal({
   children,
   }: InputProps) {
 
@@ -18,16 +18,16 @@ function HalfVertical({
 
   return (
     <div
-      className={styles.half_vertical_container}
+      className={styles.half_horizontal_container}
       style={{
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="half vertical"/>
+      <TitleDefault title="half horizontal"/>
 
       {children}
     </div>
   )
 };
 
-export { HalfVertical };
+export { HalfHorizontal };

@@ -1,11 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import { selectTheme } from "../../../providers/slices/theme.slice";
-import { ItemTitleDefault } from "../../texts/ItemTitleDefault";
+import { Icon } from '@iconify/react';
 
 import styles from "./styles.module.css";
-import { IconDefault } from "../../others/IconDefault";
 
 interface InputProps {
   title?: string;
@@ -14,6 +13,8 @@ interface InputProps {
   icon?: string;
   hoverColor?: string;
   page?: boolean;
+  iconBgColor?: string,
+  iconHoverColor?: string,
 }
 
 function VerticalItem({
@@ -21,6 +22,8 @@ function VerticalItem({
   route = "/",
   bgColor = "",
   hoverColor = "",
+  iconBgColor = "",
+  iconHoverColor = "",
   icon = "",
   page
   }: InputProps) {
@@ -61,14 +64,24 @@ function VerticalItem({
         <div
           className={styles.vertical_item}
         >
-          <IconDefault
+          <Icon
+            className={styles.vertical_item_icon}
             icon={icon}
-            bgColor={ page ? hoverColor : hover ? hoverColor : bgColor }
-            hoverColor={ hover ?
+            style={{
+              backgroundColor: page ? iconHoverColor : hover ? iconHoverColor : iconBgColor ,
+              color: hover ?
               theme.COLORS.ITEM_DEFAULT_HOVER :
-              theme.COLORS.ITEM_DEFAULT }
+              theme.COLORS.ITEM_DEFAULT
+            }}
           />
-          <ItemTitleDefault title={title}/>
+          <div className={styles.vertical_item_title}>
+            <h3
+              className={styles.vertical_item_title_text}
+              style={{color: theme.COLORS.TEXT_DEFAULT}}
+            >
+              {title}
+            </h3>
+          </div>
         </div>
       </Link>
     </div>

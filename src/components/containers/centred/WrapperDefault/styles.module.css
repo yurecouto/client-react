@@ -1,9 +1,9 @@
 .wrapper_default {
   position: absolute;
   top: 50%;
-  left: 56%;
-  transform: translate(-50%, -50%);
-  width: 86%;
+  left: 50%;
+  transform: translate(-46.8%, -50%);
+  width: 92%;
   height: 96vh;
   float: right;
   display: flex;

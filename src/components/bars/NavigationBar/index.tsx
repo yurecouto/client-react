@@ -1,11 +1,10 @@
+import React from "react";
+
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 
-import { SubtitleDefault } from "../../texts/SubtitleDefault";
-import { TitleDefault } from "../../texts/TitleDefault";
-import { VerticalItem } from "../../containers/VerticalItem";
+import { VerticalItem } from "../../others/VerticalItem";
 import { LineDefault } from "../../others/LineDefault";
-import { TextDefault } from "../../texts/TextDefault";
 
 import styles from "./styles.module.css";
 
@@ -21,9 +20,9 @@ function NavigationBar({ page }: InputProps) {
       className={styles.navigation_bar}
       style={{backgroundColor: theme.COLORS.CONTAINER_DEFAULT}}
     >
+      <div className={styles.navigation_bar_title}>
 
-      <TitleDefault title={"Client"}/>
-      <SubtitleDefault subtitle={"Administration"}/>
+      </div>
 
       <div
         className={styles.navigation_bar_items}
@@ -74,8 +73,8 @@ function NavigationBar({ page }: InputProps) {
       </div>
 
       <div className={styles.navigation_bar_foot}>
-        <TextDefault text="All Rights Reserved © 2022"/>
-        <TextDefault text=" Made by: @yurecouto"/>
+        {/* <TextDefault text="All Rights Reserved © 2022"/>
+        <TextDefault text=" Made by: @yurecouto"/> */}
       </div>
     </nav>
   )

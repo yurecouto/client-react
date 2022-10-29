@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
-import { selectTheme } from "../../../providers/slices/theme.slice";
-import { TitleDefault } from "../../texts/TitleDefault";
+import { selectTheme } from "../../../../providers/slices/theme.slice";
+import { TitleDefault } from "../../../texts/TitleDefault";
 
 import styles from "./styles.module.css";
 
@@ -10,7 +10,7 @@ interface InputProps {
   title?: string;
 }
 
-function QuartHorizontal({
+function HalfVertical({
   children,
   }: InputProps) {
 
@@ -18,16 +18,16 @@ function QuartHorizontal({
 
   return (
     <div
-      className={styles.quart_horizontal_container}
+      className={styles.half_vertical_container}
       style={{
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="quart horizontal"/>
+      <TitleDefault title="half vertical"/>
 
       {children}
     </div>
   )
 };
 
-export { QuartHorizontal };
+export { HalfVertical };
