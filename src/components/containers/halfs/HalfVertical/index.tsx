@@ -23,8 +23,6 @@ function HalfVertical({
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="half vertical"/>
-
       {children}
     </div>
   )

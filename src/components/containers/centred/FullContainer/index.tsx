@@ -22,8 +22,6 @@ function FullContainer({
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="full"/>
-
       {children}
     </div>
   )

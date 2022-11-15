@@ -23,8 +23,6 @@ function HalfHorizontal({
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="half horizontal"/>
-
       {children}
     </div>
   )

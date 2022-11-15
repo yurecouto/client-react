@@ -27,24 +27,20 @@ const Login = () => {
 
   async function handleLogin() {
     try {
-      const response = await api.post("/auth/login", login);
-      // dispatch(setTokens({
-      //   accessToken: response.data.accessToken,
-      //   refreshToken: response.data.refreshToken
-      // }));
+      localStorage.clear()
 
-      localStorage.setItem("tokens", JSON.stringify({
-          accessToken: response.data.accessToken,
-          refreshToken: response.data.refreshToken
-      }))
+      const response = await api.post("/auth/login", login);
+
+      localStorage.setItem("ACCESS_TOKEN", response.data.accessToken);
+      localStorage.setItem("REFRESH_TOKEN", response.data.refreshToken);
 
       dispatch(setUser(response.data.user));
 
-      const tokens = JSON.parse( localStorage.getItem("tokens") || "{}" )
+      const accessToken = localStorage.getItem("ACCESS_TOKEN");
 
-      if (tokens.accessToken !== "") { navigate("/home") }
+      if (accessToken !== "") { navigate("/home") }
     } catch (error) {
-      console.log("erro", error )
+      console.log("error =>", error )
     };
   };
 

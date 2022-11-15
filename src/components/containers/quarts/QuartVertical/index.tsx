@@ -23,8 +23,6 @@ function QuartVertical({
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      <TitleDefault title="quart vertical"/>
-
       {children}
     </div>
   )
