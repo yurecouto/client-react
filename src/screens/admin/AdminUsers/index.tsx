@@ -7,6 +7,7 @@ import { QuartVertical } from "../../../components/containers/quarts/QuartVertic
 import { Row } from "../../../components/containers/rows/Row";
 import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
 import MixedChart from "../../../components/charts/MixedChart";
+import { VerticalReadItem } from "../../../components/others/VerticalReadItem";
 
 const AdminUsers = () => {
   // const user = useSelector(selectUser);
@@ -31,7 +32,32 @@ const AdminUsers = () => {
               />
             </QuartVertical>
           </HalfColumn>
-          <HalfHorizontal/>
+          <HalfHorizontal>
+            <VerticalReadItem
+              name={"User name"}
+              description={"Short description about the item"}
+              info={"Small info"}
+              route={"/home"}
+            />
+            <VerticalReadItem
+              name={"User name"}
+              description={"Short description about the item"}
+              info={"Small info"}
+              route={"/home"}
+            />
+            <VerticalReadItem
+              name={"User name"}
+              description={"Short description about the item"}
+              info={"Small info"}
+              route={"/home"}
+            />
+            <VerticalReadItem
+              name={"User name"}
+              description={"Short description about the item"}
+              info={"Small info"}
+              route={"/home"}
+            />
+          </HalfHorizontal>
         </Row>
       </WrapperDefault>
     </>

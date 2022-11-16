@@ -17,7 +17,7 @@ interface InputProps {
   iconHoverColor?: string,
 }
 
-function VerticalItem({
+function VerticalBarItem({
   title,
   route = "/",
   bgColor = "",
@@ -88,4 +88,4 @@ function VerticalItem({
   )
 };
 
-export { VerticalItem };
+export { VerticalBarItem };

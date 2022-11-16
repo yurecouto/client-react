@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 
-import { VerticalItem } from "../../others/VerticalItem";
+import { VerticalBarItem } from "../../others/VerticalBarItem";
 import { LineDefault } from "../../others/LineDefault";
 
 import styles from "./styles.module.css";
@@ -28,42 +28,42 @@ function NavigationBar({ page }: InputProps) {
         className={styles.navigation_bar_items}
       >
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Home"}
           icon={"bxs:home"}
           route={"/home"}
           page={page === "/home"}
         />
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Users"}
           icon={"bxs:user"}
           route={"/users"}
           page={page === "/users"}
         />
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Products"}
           icon={"fluent:box-16-filled"}
           route={"/products"}
           page={page === "/products"}
         />
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Sells"}
           icon={"ic:baseline-sell"}
           route={"/sells"}
           page={page === "/sells"}
         />
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Info"}
           icon={"entypo:info"}
           route={"/info"}
           page={page === "/info"}
         />
         <LineDefault/>
-        <VerticalItem
+        <VerticalBarItem
           title={"Settings"}
           icon={"fa6-solid:gear"}
           route={"/settings"}
