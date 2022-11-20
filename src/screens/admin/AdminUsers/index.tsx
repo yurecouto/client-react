@@ -8,6 +8,9 @@ import { Row } from "../../../components/containers/rows/Row";
 import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
 import MixedChart from "../../../components/charts/MixedChart";
 import { VerticalReadItem } from "../../../components/others/VerticalReadItem";
+import { LineDefault } from "../../../components/others/LineDefault";
+import { FooterDefault } from "../../../components/footers/FooterDefault";
+import { LineContainer } from "../../../components/containers/generic/LineContainer";
 
 const AdminUsers = () => {
   // const user = useSelector(selectUser);
@@ -32,31 +35,78 @@ const AdminUsers = () => {
               />
             </QuartVertical>
           </HalfColumn>
-          <HalfHorizontal>
-            <VerticalReadItem
-              name={"User name"}
-              description={"Short description about the item"}
-              info={"Small info"}
-              route={"/home"}
-            />
-            <VerticalReadItem
-              name={"User name"}
-              description={"Short description about the item"}
-              info={"Small info"}
-              route={"/home"}
-            />
-            <VerticalReadItem
-              name={"User name"}
-              description={"Short description about the item"}
-              info={"Small info"}
-              route={"/home"}
-            />
-            <VerticalReadItem
-              name={"User name"}
-              description={"Short description about the item"}
-              info={"Small info"}
-              route={"/home"}
-            />
+          <HalfHorizontal
+            title={"Users"}
+          >
+            <LineContainer>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+              <VerticalReadItem
+                name={"User name"}
+                description={"Short description about the item"}
+                info={"Developer"}
+              />
+              <LineDefault/>
+            </LineContainer>
+            <FooterDefault/>
           </HalfHorizontal>
         </Row>
       </WrapperDefault>

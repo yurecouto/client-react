@@ -1,18 +1,21 @@
+import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 import styles from "./styles.module.css";
 
 interface InputProps {
-  title?: string;
+  page?: string;
+  fill?: boolean;
   bgColor?: string;
   hoverColor?: string;
   width?: string;
   handleSomething?: (param: any) => void;
 }
 
-function ButtonDefault({
-  title,
+function PaginationNumber({
+  page,
+  fill,
   bgColor = "",
   hoverColor = "",
   handleSomething,
@@ -38,21 +41,19 @@ function ButtonDefault({
   };
 
   return (
-    <button
-      className={styles.standard_button}
-      onMouseOver={handleMouseIn}
-      onMouseOut={handleMouseOut}
-      onClick={handleSomething}
+    <Icon
+      className={styles.pagination_number_button}
+      icon={`bi:${page}-square${fill ? "-fill" : ""}`}
+      onMouseEnter={handleMouseIn}
+      onMouseLeave={handleMouseOut}
       style={{
-        backgroundColor: hover ? hoverColor : bgColor,
-        color: "#fff",
-        width: width
-    }} >
-
-      {title}
-
-    </button>
+        color: hover ?
+        theme.COLORS.ITEM_DEFAULT_HOVER :
+        theme.COLORS.ITEM_DEFAULT
+      }}
+      onClick={() => handleSomething}
+    />
   )
 };
 
-export { ButtonDefault };
+export { PaginationNumber };

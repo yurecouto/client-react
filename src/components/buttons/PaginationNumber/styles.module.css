@@ -1,6 +1,6 @@
-.standard_button {
-  width: 40%;
-  height: 40px;
+.pagination_number_button {
+  width: 32px;
+  height: 32px;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;

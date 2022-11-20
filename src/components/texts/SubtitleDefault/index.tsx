@@ -7,10 +7,12 @@ import styles from "./styles.module.css";
 
 interface InputProps {
   subtitle?: string;
+  textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
 
 function SubtitleDefault({
   subtitle,
+  textAlign = "center"
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
@@ -18,7 +20,10 @@ function SubtitleDefault({
   return (
     <h2
       className={styles.subtitle_default}
-      style={{color: theme.COLORS.TEXT_DEFAULT}}
+      style={{
+        color: theme.COLORS.TEXT_DEFAULT,
+        textAlign: textAlign
+      }}
     >
       {subtitle}
     </h2>

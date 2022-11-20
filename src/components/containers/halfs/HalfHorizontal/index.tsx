@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../../providers/slices/theme.slice";
-import { TitleDefault } from "../../../texts/TitleDefault";
+import { FooterDefault } from "../../../footers/FooterDefault";
+import { SubtitleDefault } from "../../../texts/SubtitleDefault";
 
 import styles from "./styles.module.css";
 
@@ -12,6 +13,7 @@ interface InputProps {
 
 function HalfHorizontal({
   children,
+  title
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
@@ -23,7 +25,15 @@ function HalfHorizontal({
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
       }}
     >
-      {children}
+      <div
+        className={styles.half_horizontal_sub_container}
+      >
+        <SubtitleDefault
+          textAlign="left"
+          subtitle={title}
+        />
+        {children}
+      </div>
     </div>
   )
 };
