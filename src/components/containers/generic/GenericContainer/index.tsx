@@ -8,7 +8,7 @@ interface InputProps {
   children?: ReactNode;
 }
 
-function LineContainer({
+function GenericContainer({
   children,
   }: InputProps) {
 
@@ -26,4 +26,4 @@ function LineContainer({
   )
 };
 
-export { LineContainer };
+export { GenericContainer };

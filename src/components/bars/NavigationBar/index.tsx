@@ -57,13 +57,6 @@ function NavigationBar({ page }: InputProps) {
         />
         <LineDefault/>
         <VerticalBarItem
-          title={"Info"}
-          icon={"entypo:info"}
-          route={"/info"}
-          page={page === "/info"}
-        />
-        <LineDefault/>
-        <VerticalBarItem
           title={"Settings"}
           icon={"fa6-solid:gear"}
           route={"/settings"}

@@ -1,4 +1,9 @@
 .title_default {
-  text-align: center;
-  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  margin-top: 16px;
+  margin-left: 16px;
+  font-size: 32px;
 }

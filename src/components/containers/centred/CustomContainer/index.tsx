@@ -8,25 +8,32 @@ import styles from "./styles.module.css";
 
 interface InputProps {
   children?: ReactNode;
-  title?: string;
+  justifyContent?: string;
+  width?: string;
+  height?: string;
 }
 
-function HalfHorizontal({
+function CustomContainer({
   children,
-  title
+  width,
+  justifyContent = "space-between",
+  height = "96vh"
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
 
   return (
     <div
-      className={styles.half_horizontal_container}
+      className={styles.custom_container}
       style={{
         backgroundColor: theme.COLORS.CONTAINER_DEFAULT,
+        justifyContent: justifyContent,
+        width: width,
+        height: height,
       }}
     >
       <div
-        className={styles.half_horizontal_sub_container}
+        className={styles.custom_sub_container}
       >
         {children}
       </div>
@@ -34,4 +41,4 @@ function HalfHorizontal({
   )
 };
 
-export { HalfHorizontal };
+export { CustomContainer };

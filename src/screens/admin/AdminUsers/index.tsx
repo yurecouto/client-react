@@ -1,16 +1,15 @@
 import React from "react";
 
 import { NavigationBar } from "../../../components/bars/NavigationBar";
-import { HalfColumn } from "../../../components/containers/columns/HalfColumn";
-import { HalfHorizontal } from "../../../components/containers/halfs/HalfHorizontal";
-import { QuartVertical } from "../../../components/containers/quarts/QuartVertical";
 import { Row } from "../../../components/containers/rows/Row";
 import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
-import MixedChart from "../../../components/charts/MixedChart";
 import { VerticalReadItem } from "../../../components/others/VerticalReadItem";
 import { LineDefault } from "../../../components/others/LineDefault";
-import { FooterDefault } from "../../../components/footers/FooterDefault";
-import { LineContainer } from "../../../components/containers/generic/LineContainer";
+import { PageFooter } from "../../../components/footers/PageFooter";
+import { GenericContainer } from "../../../components/containers/generic/GenericContainer";
+import { HeaderDefault } from "../../../components/headers/HeaderDefault";
+import { SearchInput } from "../../../components/inputs/SearchInput";
+import { CustomContainer } from "../../../components/containers/centred/CustomContainer";
 
 const AdminUsers = () => {
   // const user = useSelector(selectUser);
@@ -25,20 +24,16 @@ const AdminUsers = () => {
       <NavigationBar page={window.location.pathname}/>
 
       <WrapperDefault>
-        <Row>
-          <HalfColumn>
-            <QuartVertical/>
-            <QuartVertical>
-              <MixedChart
-                seriesLine={seriesLine}
-                seriesBar={seriesBar}
-              />
-            </QuartVertical>
-          </HalfColumn>
-          <HalfHorizontal
-            title={"Users"}
+        <Row justifyContent="space-around">
+          <CustomContainer
+            width="70%"
           >
-            <LineContainer>
+            <GenericContainer>
+              <HeaderDefault
+                title="Users"
+              >
+                <SearchInput/>
+              </HeaderDefault>
               <VerticalReadItem
                 name={"User name"}
                 description={"Short description about the item"}
@@ -105,9 +100,9 @@ const AdminUsers = () => {
                 info={"Developer"}
               />
               <LineDefault/>
-            </LineContainer>
-            <FooterDefault/>
-          </HalfHorizontal>
+            </GenericContainer>
+            <PageFooter/>
+          </CustomContainer>
         </Row>
       </WrapperDefault>
     </>

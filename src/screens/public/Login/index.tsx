@@ -46,8 +46,6 @@ const Login = () => {
 
   return(
     <>
-      <SwitchTheme/>
-
       <LoginContainer>
         <Input
           label="E-mail"

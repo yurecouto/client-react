@@ -32,20 +32,22 @@ function SwitchTheme() {
   }, [dispatch, nightMode])
 
   return (
-    <label className={styles.switch}>
-      <input
-        className={styles.switch_input}
-        type="checkbox"
-        checked={nightMode}
-        onChange={handleChangeTheme}
-      />
-      <span
-        className={styles.slider}
-        style={{
-          backgroundColor: theme.COLORS.ITEM_DEFAULT,
-        }}
-      />
-    </label>
+    <div className={styles.switch_container}>
+      <label className={styles.switch}>
+        <input
+          className={styles.switch_input}
+          type="checkbox"
+          checked={nightMode}
+          onChange={handleChangeTheme}
+        />
+        <span
+          className={styles.slider}
+          style={{
+            backgroundColor: theme.COLORS.ITEM_DEFAULT,
+          }}
+        />
+      </label>
+    </div>
   )
 };
 

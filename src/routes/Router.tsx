@@ -11,7 +11,6 @@ import AdminUsers from "../screens/admin/AdminUsers";
 import AdminProducts from "../screens/admin/AdminProducts";
 import AdminSells from "../screens/admin/AdminSells";
 import AdminSettings from "../screens/admin/AdminSettings";
-import AdminInfo from "../screens/admin/AdminInfo";
 
 const Router = () => {
   return (
@@ -22,7 +21,6 @@ const Router = () => {
           <Route path="/users" element={<AdminUsers />} />
           <Route path="/products" element={<AdminProducts />} />
           <Route path="/sells" element={<AdminSells />} />
-          <Route path="/info" element={<AdminInfo />} />
           <Route path="/settings" element={<AdminSettings />} />
         </Route>
 

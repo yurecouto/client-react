@@ -10,11 +10,13 @@ import styles from "./styles.module.css";
 
 interface InputProps {
   title?: string;
+  itemName?: string;
   handleAddItem?: (param: any) => void;
 }
 
-function FooterDefault({
+function PageFooter({
   title,
+  itemName = "Something"
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
@@ -51,14 +53,35 @@ function FooterDefault({
 
   return (
     <div
-      className={styles.footer_default_container}
+      className={styles.page_footer_container}
     >
+      <div className={styles.page_footer_pagination}>
+        <IconButton
+          icon="ph:arrow-square-left-fill"
+        />
+
+        <PaginationNumber
+          page={"1"}
+          fill={true}
+        />
+        <PaginationNumber
+          page={"2"}
+        />
+        <PaginationNumber
+          page={"3"}
+        />
+
+        <IconButton
+          icon="ph:arrow-square-right-fill"
+        />
+      </div>
+
       <ButtonDefault
         width="20%"
-        title={title}
+        title={`Add ${itemName}`}
       />
     </div>
   )
 };
 
-export { FooterDefault };
+export { PageFooter };

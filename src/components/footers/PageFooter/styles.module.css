@@ -1,0 +1,21 @@
+.page_footer_container {
+  height: 8vh;
+  width: 98%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page_footer_pagination {
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.page_footer_pagination_icon {
+  height: 40px;
+  width: 40px;
+}

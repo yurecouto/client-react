@@ -1,8 +1,6 @@
 import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../../providers/slices/theme.slice";
-import { PageFooter } from "../../../footers/PageFooter";
-import { SubtitleDefault } from "../../../texts/SubtitleDefault";
 
 import styles from "./styles.module.css";
 
