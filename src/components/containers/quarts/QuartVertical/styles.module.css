@@ -4,4 +4,7 @@
   border-radius: 8px;
   position: relative;
   align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }

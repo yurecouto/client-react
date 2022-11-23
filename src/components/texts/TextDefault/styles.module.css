@@ -1,5 +1,8 @@
 .text_default {
-  font-size: 12px;
-  text-align: center;
-  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 24px;
 }

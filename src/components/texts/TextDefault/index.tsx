@@ -7,21 +7,29 @@ import styles from "./styles.module.css";
 
 interface InputProps {
   text?: string;
+  wheight?: string;
+  textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
 
 function TextDefault({
   text,
+  wheight= "100",
+  textAlign = "center"
   }: InputProps) {
 
   const theme = useSelector(selectTheme);
 
   return (
-    <p
+    <h2
       className={styles.text_default}
-      style={{color: theme.COLORS.TEXT_DEFAULT}}
+      style={{
+        color: theme.COLORS.TEXT_DEFAULT,
+        textAlign: textAlign,
+        fontWeight: wheight
+      }}
     >
       {text}
-    </p>
+    </h2>
   )
 };
 

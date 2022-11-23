@@ -3,6 +3,7 @@ import React from "react";
 import { NavigationBar } from "../../../components/bars/NavigationBar";
 import MixedChart from "../../../components/charts/MixedChart";
 import PieChart from "../../../components/charts/PieChart";
+import { CustomContainer } from "../../../components/containers/centred/CustomContainer";
 import { WrapperDefault } from "../../../components/containers/centred/WrapperDefault";
 import { HalfColumn } from "../../../components/containers/columns/HalfColumn";
 import { GenericContainer } from "../../../components/containers/generic/GenericContainer";
@@ -11,8 +12,11 @@ import { QuartVertical } from "../../../components/containers/quarts/QuartVertic
 import { Row } from "../../../components/containers/rows/Row";
 import { PageFooter } from "../../../components/footers/PageFooter";
 import { HeaderDefault } from "../../../components/headers/HeaderDefault";
+import { ImageDefault } from "../../../components/images/ImageDefault";
 import { LineDefault } from "../../../components/others/LineDefault";
 import { VerticalReadItem } from "../../../components/others/VerticalReadItem";
+import { SubtitleDefault } from "../../../components/texts/SubtitleDefault";
+import { TextDefault } from "../../../components/texts/TextDefault";
 
 const AdminProducts = () => {
   // const user = useSelector(selectUser);
@@ -29,12 +33,71 @@ const AdminProducts = () => {
       <WrapperDefault>
         <Row>
           <HalfColumn>
-            <QuartVertical/>
+            <QuartVertical>
+              <ImageDefault
+                uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAKBou4dEvD7x_eMmQQlsZOYfoC8Pm8F_2Q&usqp=CAU"
+                height="42"
+              />
+              <CustomContainer
+                height="42vh"
+                width="45%"
+              >
+                <Row>
+                  <SubtitleDefault
+                    subtitle="Product: "
+                  />
+
+                  <TextDefault
+                    text="Bass"
+                  />
+                </Row>
+                <LineDefault/>
+                <Row>
+                  <SubtitleDefault
+                    subtitle="Price: "
+                  />
+
+                  <TextDefault
+                    text="$10.00"
+                  />
+                </Row>
+                <LineDefault/>
+                <Row>
+                  <SubtitleDefault
+                    subtitle="Description: "
+                  />
+
+                  <TextDefault
+                    text="Music Stuff"
+                  />
+                </Row>
+                <LineDefault/>
+                <Row>
+                  <SubtitleDefault
+                    subtitle="Sales: "
+                  />
+
+                  <TextDefault
+                    text="200"
+                  />
+                </Row>
+                <LineDefault/>
+                <Row>
+                  <SubtitleDefault
+                    subtitle="Available: "
+                  />
+
+                  <TextDefault
+                    text="10"
+                  />
+                </Row>
+              </CustomContainer>
+            </QuartVertical>
             <QuartVertical>
               <PieChart
-                  series={seriesB}
-                  labels={labelsB}
-                />
+                series={seriesB}
+                labels={labelsB}
+              />
             </QuartVertical>
           </HalfColumn>
           <HalfHorizontal>
