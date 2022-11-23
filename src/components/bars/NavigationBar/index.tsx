@@ -20,10 +20,6 @@ function NavigationBar({ page }: InputProps) {
       className={styles.navigation_bar}
       style={{backgroundColor: theme.COLORS.CONTAINER_DEFAULT}}
     >
-      <div className={styles.navigation_bar_title}>
-
-      </div>
-
       <div
         className={styles.navigation_bar_items}
       >

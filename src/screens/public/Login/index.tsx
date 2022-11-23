@@ -28,7 +28,6 @@ const Login = () => {
   async function handleLogin() {
     try {
       localStorage.clear()
-
       const response = await api.post("/auth/login", login);
 
       localStorage.setItem("ACCESS_TOKEN", response.data.accessToken);

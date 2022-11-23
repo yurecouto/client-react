@@ -4,14 +4,25 @@
 caso seja nulo ou undefined, retornaremos false, caso ele exista será true,
 com true poderemos acessar rotas privadas */
 export const useAuthJwt = () => {
-  const tokens = JSON.parse( localStorage.getItem("tokens") || "{}" )
+  const accessToken = localStorage.getItem("ACCESS_TOKEN")
 
-  if (tokens.accessToken !== "") {
+  if (accessToken !== "") {
       return true
   } else {
       return false
   };
 };
+
+
+export const getAuthorizationHeader =  () => {
+  const access = localStorage.getItem("ACCESS_TOKEN") || "";
+  const refresh = localStorage.getItem("REFRESH_TOKEN") || "";
+
+  return {
+    "x-access-token": access,
+    "x-refresh-token": refresh
+  }
+}
 
 // // Função para autenticar a leitura (POST)
 // export const useAuthWrite = (value: string) => {

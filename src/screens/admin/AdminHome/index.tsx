@@ -27,6 +27,20 @@ const AdminHome = () => {
     },
   ]
 
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const response = await api.get("/object/showall");
+
+        console.log(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetch()
+  }, [])
+
   return (
     <>
       <NavigationBar page={window.location.pathname}/>
